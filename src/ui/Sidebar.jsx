@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="bg-secondary-0 row-start-1 row-span-2">
+    <div className="bg-secondary-0 row-start-1 row-span-2 border-l p-4 border-gray-400">
       <ul className="flex flex-col gap-y-4">
         <li>
           {/* <NavLink
@@ -48,7 +48,7 @@ export default Sidebar;
 
 function CustomNavLink({children,to}) {
   const navlinkClasses =
-    "flex items-center gap-x-2 hover:bg-primary-100/50  px-2 py-1.5 rounded-lg transition-all duration-300";
+    "flex items-center gap-x-2 hover:bg-primary-100/50 px-2 py-1.5 rounded-lg transition-all duration-300";
 
   return (
     <NavLink

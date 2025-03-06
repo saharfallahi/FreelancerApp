@@ -1,7 +1,7 @@
-import TextField from "../../ui/TextField";
 import Loader from "../../ui/Loader";
+import RHFTextField from "../../ui/RHFTextField";
 
-function SendOTpForm({ isSendingOtp,phoneNumber,onChange,onSubmit }) {
+function SendOTpForm({ register,isSendingOtp,onSubmit }) {
   
 
 
@@ -9,9 +9,8 @@ function SendOTpForm({ isSendingOtp,phoneNumber,onChange,onSubmit }) {
   return (
     <div>
       <form className="space-y-10" onSubmit={onSubmit}>
-        <TextField
-          value={phoneNumber}
-          onChange={onChange}
+        <RHFTextField
+        register={register}
           name="phoneNumber"
           label="شماره موبایل"
         />
