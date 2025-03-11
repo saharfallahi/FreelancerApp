@@ -2,7 +2,7 @@ import useUser from "./useUser";
 
 function UserAvatar() {
   const { user } = useUser();
-  console.log(user);
+
   return (
     <div className="flex items-center gap-x-2 text-secondary-600">
       <img
