@@ -98,11 +98,11 @@ function CreateProjectForm({ onClose, projectToEdit = {} }) {
           required: "توضیحات ضروری است",
           maxLength: {
             value: 100,
-            message: "طول عنوان حداکثر 50 کاراکتر می باشد",
+            message: "طول توضیحات حداکثر 50 کاراکتر می باشد",
           },
           minLength: {
             value: 10,
-            message: "طول عنوان حداقل 10 کاراکتر می باشد",
+            message: "طول توضیحات حداقل 10 کاراکتر می باشد",
           },
         }}
         errors={errors}
@@ -131,7 +131,7 @@ function CreateProjectForm({ onClose, projectToEdit = {} }) {
       <DatePickerField date={date} setDate={setDate} label="ددلاین" />
 
       <div className="mt-8">
-        {isCreating ? (
+        {isCreating ||isEditing ? (
           <Loader />
         ) : (
           <button type="submit" className="btn btn--primary w-full">
