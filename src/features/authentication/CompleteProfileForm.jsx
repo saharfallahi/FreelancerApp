@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import RHFTextField from "../../ui/RHFTextField";
 import { useForm } from "react-hook-form";
 import RedioInputGroup from "../../ui/RedioInputGroup";
-import RHFSelect from "../../ui/RHFSelect";
 
 function CompleteProfileForm() {
   const {

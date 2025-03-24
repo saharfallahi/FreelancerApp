@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import RHFSelect from "../../ui/RHFselect";
 import useChangeProposalStatus from "./useChangeProposalStatus";
 import { useQueryClient } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import Loader from "../../ui/Loader";
+import RHFSelect from "../../ui/RHFSelect";
 
 const options = [
   {
@@ -19,6 +19,7 @@ const options = [
     value: 2,
   },
 ];
+
 function ChangeProposalStatus({ proposalId, onClose }) {
   const { id: projectId } = useParams();
   const { register, handleSubmit } = useForm();

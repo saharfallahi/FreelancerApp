@@ -73,7 +73,7 @@
 
 .rti--tag {
   background-color: rgb(var(--color-secondary-500));
-  color: rgb(var(--color-secondary-700));
+  color: rgb(var(--color-secondary-500));
 }
 
 @layer components {

@@ -4,11 +4,11 @@ import FilterDropDown from "../../../ui/FilterDropDown";
 
 const sortOptions = [
   {
-    label: "مرتب سازی(جدیدترین)",
+    label: "مرتب سازی (جدیدترین)",
     value: "latest",
   },
   {
-    label: "مرتب سازی(قدیمی ترین)",
+    label: "مرتب سازی (قدیمی ترین)",
     value: "earliest",
   },
 ];
@@ -39,7 +39,7 @@ function ProjectsHeader() {
         <FilterDropDown
           filterField="category"
           options={[
-            { value: "ALL", label: "(دسته بندی(همه" },
+            { value: "ALL", label: "دسته بندی (همه)" },
             ...transformedCategories,
           ]}
         />

@@ -39,7 +39,7 @@ function ProposalRow({ proposal, index }) {
         <Modal
           open={open}
           onClose={() => setOpen(false)}
-          title="تغییر وضعیت درخواست"
+          title={`تغییر وضعیت درخواست ${proposal.user.name}`}
         >
           <ChangeProposalStatus
             proposalId={proposal._id}
