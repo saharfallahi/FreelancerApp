@@ -14,7 +14,7 @@ function NotFound() {
             </h1>
             <button onClick={moveBack} className="flex items-center gap-x-2">
               <HiArrowRight className="w-6 h-6 text-primary-900" />
-              <span>برگشت</span>
+              <span className="text-secondary-500">برگشت</span>
             </button>
           </div>
         </div>

@@ -83,8 +83,4 @@ function App() {
 
 export default App;
 
-//* auth or login
-//  form => getOTP => input + button => phone number =>send OTP
-//  form => checkOTP => OTP , phone number
 
-//* features-based on driven folder structure

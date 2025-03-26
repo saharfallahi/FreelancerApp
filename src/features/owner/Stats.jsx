@@ -11,7 +11,7 @@ function Stats({ projects }) {
   console.log(numOfProposals);
 
   return (
-    <div className="grid grid-cols-3 gap-x-8">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-x-8 ">
       <Stat
         title="پروژه ها"
         value={numOfProjects}

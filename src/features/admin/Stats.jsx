@@ -7,7 +7,7 @@ function Stats({ proposals, projects, users }) {
   const numOfUsers = users.length;
 
   return (
-    <div className="grid grid-cols-3 gap-x-8">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-x-8">
       <Stat
         title="کاربران"
         value={numOfUsers}
