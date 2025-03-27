@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-secondary-0 py-4 px-4 border-b border-secondary-200">
+    <nav className="fixed w-full top-0 left-0  bg-secondary-0 py-4 px-4 border-b border-secondary-200">
       <div className="max-w-7xl mx-auto  sm:px-2 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="hidden md:flex gap-x-2 lg:gap-x-4 text-secondary-600 text-sm lg:text-base">
@@ -33,17 +33,17 @@ const Navbar = () => {
                 onClick={() => setIsOpen(true)}
                 className={`h-6 w-6 ${isOpen ? "hidden" : "block"}`}
                 fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
               </svg>
+              
               <svg
                 onClick={() => setIsOpen(false)}
                 className={`h-6 w-6 ${isOpen ? "block" : "hidden"}`}
@@ -75,7 +75,7 @@ const Navbar = () => {
         ref={ref}
         className={`${isOpen ? "block" : "hidden"} md:hidden `}
       >
-        <div className="px-2 pt-4 pb-3 space-y-2 sm:px-3 text-sm md:text-base text-secondary-600">
+        <div className="px-2 pt-4 pb-3 space-y-2 sm:px-3 text-sm md:text-base text-secondary-600 ">
           {links.map((link) => (
             <CustomNavLink key={link.name} to={link.to}>
               {link.name}

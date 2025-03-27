@@ -15,19 +15,19 @@ function Stats({ projects }) {
       <Stat
         title="پروژه ها"
         value={numOfProjects}
-        icon={<HiOutlineViewGrid className="w-20 h-20" />}
+        icon={<HiOutlineViewGrid className="w-12 h-12 md:w-20 md:h-20" />}
         color="primary"
       />
       <Stat
         title="پروژه های واگذار شده"
         value={numOfAcceptedProjects}
-        icon={<HiCurrencyDollar className="w-20 h-20" />}
+        icon={<HiCurrencyDollar className="w-12 h-12 md:w-20 md:h-20" />}
         color="green"
       />
       <Stat
         title="درخواست ها"
         value={numOfProposals}
-        icon={<HiCollection className="w-20 h-20" />}
+        icon={<HiCollection className="w-12 h-12 md:w-20 md:h-20" />}
         color="red"
       />
     </div>
