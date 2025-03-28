@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full top-0 left-0  bg-secondary-0 py-4 px-4 border-b border-secondary-200">
+    <nav className="fixed w-full top-0 left-0  bg-secondary-0 py-4 px-4 border-b border-secondary-200 ">
       <div className="max-w-7xl mx-auto  sm:px-2 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="hidden md:flex gap-x-2 lg:gap-x-4 text-secondary-600 text-sm lg:text-base">
@@ -73,9 +73,15 @@ const Navbar = () => {
 
       <div
         ref={ref}
-        className={`${isOpen ? "block" : "hidden"} md:hidden `}
+        // className={`${isOpen ? "block" : "hidden"} md:hidden `}
+        className={`md:hidden transition-all duration-300 ease-in-out transform
+          ${
+            isOpen
+              ? "h-full opacity-100 translate-y-0"
+              : "h-0 opacity-0 -translate-y-4 pointer-events-none "
+          }`}
       >
-        <div className="px-2 pt-4 pb-3 space-y-2 sm:px-3 text-sm md:text-base text-secondary-600 ">
+        <div className="px-2 pt-4 pb-3 space-y-2 sm:px-3 text-sm md:text-base text-secondary-600  ">
           {links.map((link) => (
             <CustomNavLink key={link.name} to={link.to}>
               {link.name}

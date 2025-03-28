@@ -16,19 +16,19 @@ function Stats({ proposals }) {
       <Stat
         title="درخواست ها"
         value={numOfProposals}
-        icon={<HiOutlineViewGrid className="w-20 h-20" />}
+        icon={<HiOutlineViewGrid className="w-12 h-12 md:w-20 md:h-20" />}
         color="primary"
       />
       <Stat
         title="درخواست های تاییدشده"
         value={acceptedProposals.length}
-        icon={<HiCurrencyDollar className="w-20 h-20" />}
+        icon={<HiCurrencyDollar className="w-12 h-12 md:w-20 md:h-20" />}
         color="green"
       />
       <Stat
         title="کیف پول"
         value={toPersianNumbersWithComma(balance)}
-        icon={<HiCollection className="w-20 h-20" />}
+        icon={<HiCollection className="w-12 h-12 md:w-20 md:h-20" />}
         color="red"
       />
     </div>

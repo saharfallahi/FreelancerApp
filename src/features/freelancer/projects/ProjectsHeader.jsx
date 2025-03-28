@@ -31,9 +31,9 @@ const statusOptions=[
 function ProjectsHeader() {
   const { transformedCategories } = useCategories();
   return (
-    <div className="flex items-center justify-between text-secondary-700 mb-8">
-      <h1 className="text-lg font-bold">لیست پروژه ها</h1>
-      <div className="flex  gap-x-4">
+    <div className="flex flex-col justify-end lg:flex-row lg:items-center lg:justify-between text-secondary-700 mb-8">
+      <h1 className="text-lg md:text-xl font-black mb-4 lg:mb-0">لیست پروژه ها</h1>
+      <div className="flex flex-col  md:flex-row gap-y-2 md:gap-x-4">
         <Filter filterField="status" options={statusOptions}/>
         <FilterDropDown filterField="sort" options={sortOptions} />
         <FilterDropDown

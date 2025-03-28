@@ -7,7 +7,7 @@ function ProjectsHeader() {
   const [open, setOpen] = useState(false);
   return (
     <div className="flex items-center justify-between mb-8">
-      <h1 className="font-black text-secondary-700 text-xl">پروژه های شما</h1>
+      <h1 className="text-lg md:text-xl font-black text-secondary-700">پروژه های شما</h1>
       <Modal
         title="اضافه کردن پروژه جدید"
         open={open}
@@ -17,10 +17,10 @@ function ProjectsHeader() {
       </Modal>
       <button
         onClick={() => setOpen(true)}
-        className="btn btn--primary flex items-center gap-x-2"
+        className="btn btn--primary flex items-center gap-x-2 text-sm md:text-base"
       >
-        <HiOutlinePlus />
-        <span>اضافه کردن پروژه</span>
+        <HiOutlinePlus/>
+        <span>ایجاد پروژه</span>
       </button>
     </div>
   );

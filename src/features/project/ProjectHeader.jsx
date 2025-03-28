@@ -8,7 +8,7 @@ function ProjectHeader({ project }) {
       <button onClick={moveBack} >
         <HiArrowRight className="w-6 h-6 text-primary-900"/>
       </button>
-      <h1 className="font-black text-secondary-700 text-xl">
+      <h1 className="text-lg md:text-xl font-black text-secondary-700">
         لیست درخواست های {project.title}
       </h1>
     </div>

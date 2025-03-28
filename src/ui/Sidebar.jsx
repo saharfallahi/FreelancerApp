@@ -18,7 +18,7 @@ function Sidebar({ children, isOpen, onClose }) {
       <div
         className={` bg-secondary-0 border-r border-gray-400 p-4
           fixed md:static md:row-start-1 md:row-span-2
-          inset-y-0 right-0 z-50 w-64
+          inset-y-0 right-0 z-50 w-48 md:w-64
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full md:translate-x-0"}`}
       >
