@@ -5,7 +5,6 @@ import queryString from "query-string";
 
 export default function useProjects() {
   const { search } = useLocation();
-  // console.log(search);
   const queryObject = queryString.parse(search);
   
   const { data, isLoading } = useQuery({

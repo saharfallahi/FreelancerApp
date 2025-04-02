@@ -19,7 +19,7 @@ function RadioInput({
         {...register(name, validationSchema)}
         checked={watch(name) === value}
       />
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className="text-sm md:text-base">{label}</label>
      
     </div>
   );

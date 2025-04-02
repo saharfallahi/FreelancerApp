@@ -38,7 +38,7 @@ function CompleteProfileForm() {
 
   return (
     <div className="flex flex-col gap-y-6 items-center pt-10">
-      <h1 className="font-bold text-3xl text-secondary-700">تکمیل اطلاعات</h1>
+      <h1 className="font-bold text-xl md:text-3xl text-secondary-700">تکمیل اطلاعات</h1>
       <div className="w-full sm:max-w-sm">
         <form className="space-y-10 " onSubmit={handleSubmit(profileSubmit)}>
           <RHFTextField
@@ -94,7 +94,7 @@ function CompleteProfileForm() {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default CompleteProfileForm;
+export default CompleteProfileForm

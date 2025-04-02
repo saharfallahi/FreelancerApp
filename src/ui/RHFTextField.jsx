@@ -2,12 +2,12 @@ function RHFTextField({ label, name, register, required, type = "text" ,  valida
 
   return (
     <div>
-      <label className="mb-2 block text-secondary-700" htmlFor={name}>
+      <label className="text-sm md:text-base mb-2 block text-secondary-700" htmlFor={name}>
         {label} {required && <span className="text-error">*</span>}
       </label>
       <input
         {...register(name, validationSchema)}
-        className="textField__input"
+        className="textField__input "
         type={type}
         id={name}
         autoComplete="off"

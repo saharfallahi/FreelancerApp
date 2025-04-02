@@ -6,9 +6,9 @@ function ProjectHeader({ project }) {
   return (
     <div className="flex items-center gap-x-4 mb-8 ">
       <button onClick={moveBack} >
-        <HiArrowRight className="w-6 h-6 text-primary-900"/>
+        <HiArrowRight className="w-5 h-5 md:w-6 md:h-6 text-primary-900"/>
       </button>
-      <h1 className="text-lg md:text-xl font-black text-secondary-700">
+      <h1 className="text-md md:text-xl font-black text-secondary-700">
         لیست درخواست های {project.title}
       </h1>
     </div>

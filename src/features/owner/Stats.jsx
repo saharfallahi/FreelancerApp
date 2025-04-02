@@ -3,12 +3,12 @@ import Stat from "../../ui/Stat";
 
 function Stats({ projects }) {
   const numOfProjects = projects.length;
-  const numOfAcceptedProjects = projects.filter((p) => p.status === 2).length;
+  const numOfAcceptedProjects = projects.filter((p) => p.freelancer).length;
   const numOfProposals = projects.reduce(
     (acc, curr) => curr.proposals.length + acc,
     0
   );
-  console.log(numOfProposals);
+ 
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-x-8 ">

@@ -31,7 +31,7 @@ function Header({ onMenuClick }) {
           </svg>
         </button>
 
-        <div className="flex items-center gap-x-8">
+        <div className="md:w-full flex flex-row-reverse md:flex-row items-center justify-between gap-x-8">
           <UserAvatar />
           <HeaderMenu />
         </div>

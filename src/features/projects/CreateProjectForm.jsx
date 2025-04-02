@@ -124,8 +124,8 @@ function CreateProjectForm({ onClose, projectToEdit = {} }) {
         options={categories}
         required
       />
-      <div>
-        <label className="mb-2 block text-secondary-700">تگ</label>
+      <div className="text-sm md:text-base">
+        <label className=" mb-2 block text-secondary-700">تگ</label>
         <TagsInput value={tags} onChange={setTags} name="tags" />
       </div>
       <DatePickerField date={date} setDate={setDate} label="ددلاین" />

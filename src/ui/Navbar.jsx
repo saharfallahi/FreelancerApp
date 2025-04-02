@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CustomNavLink } from "./CustomNavlink";
 import useOutsideClick from "../hooks/useOutsideClick";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,17 +34,17 @@ const Navbar = () => {
                 onClick={() => setIsOpen(true)}
                 className={`h-6 w-6 ${isOpen ? "hidden" : "block"}`}
                 fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
                 <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
-              
+
               <svg
                 onClick={() => setIsOpen(false)}
                 className={`h-6 w-6 ${isOpen ? "block" : "hidden"}`}
@@ -62,11 +63,15 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="flex items-center">
-            {/* <img src="/path/to/logo.png" alt="Logo" className="h-8 mr-2" />   */}
-            <span className="text-lg md:text-xl  text-primary-700 font-bold whitespace-nowrap">
+          <div className="flex items-center gap-x-4">
+            <DarkModeToggle/>
+            <div className="flex items-center">
+
+            <span className="hidden md:block text-lg md:text-xl  text-primary-700 font-bold whitespace-nowrap">
               Freelancing App
             </span>
+            <img src="/logoFA.png" alt="Logo" className="h-8 mr-2" />  
+            </div>
           </div>
         </div>
       </div>

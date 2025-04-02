@@ -12,7 +12,6 @@ function CreateProposal({ onClose, projectId }) {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     createProposal(
       { ...data, projectId },
       {

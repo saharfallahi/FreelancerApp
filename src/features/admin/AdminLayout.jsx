@@ -1,6 +1,8 @@
 import {
   HiCollection,
-  HiHome,
+  HiOutlineCollection,
+  HiOutlineHome,
+  HiOutlineUser,
   HiOutlineViewGrid,
   HiUser,
 } from "react-icons/hi";
@@ -9,6 +11,8 @@ import { CustomNavLink } from "../../ui/CustomNavlink";
 import Sidebar from "../../ui/Sidebar";
 import { useState } from "react";
 import Header from "../../ui/Header";
+import Logout from "../authentication/Logout";
+import { LuLayoutDashboard } from "react-icons/lu";
 
 function AdminLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,22 +21,29 @@ function AdminLayout() {
     <AppLayot>
       <Header onMenuClick={() => setIsSidebarOpen(true)} />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)}>
+        <CustomNavLink to="/">
+          <HiOutlineHome />
+          <span  className="text-sm md:text-base">صفحه اصلی</span>
+        </CustomNavLink>
         <CustomNavLink to="dashboard">
-          <HiHome />
-          <span>داشبورد</span>
+          <LuLayoutDashboard />
+          <span  className="text-sm md:text-base">داشبورد</span>
         </CustomNavLink>
         <CustomNavLink to="users">
-          <HiUser />
-          <span>کاربران</span>
+          <HiOutlineUser />
+          <span  className="text-sm md:text-base">کاربران</span>
         </CustomNavLink>
         <CustomNavLink to="projects">
           <HiOutlineViewGrid />
-          <span>پروژه ها</span>
+          <span  className="text-sm md:text-base">پروژه ها</span>
         </CustomNavLink>
         <CustomNavLink to="proposals">
-          <HiCollection />
-          <span>درخواست ها</span>
+          <HiOutlineCollection />
+          <span  className="text-sm md:text-base">درخواست ها</span>
         </CustomNavLink>
+        <div className="md:hidden pr-2">
+          <Logout />
+        </div>
       </Sidebar>
     </AppLayot>
   );

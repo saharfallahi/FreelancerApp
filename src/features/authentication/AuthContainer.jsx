@@ -6,7 +6,7 @@ import { getOtp } from "../../services/authService";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import useUser from "./useUser";
-import { replace, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function AuthContainer() {
   const navigate = useNavigate();
@@ -14,9 +14,10 @@ function AuthContainer() {
   const { register, handleSubmit, getValues } = useForm();
   const { user } = useUser();
 
+
   useEffect(() => {
     if (user) navigate("/", { replace: true });
-  }, [user,navigate]);
+  }, [user, navigate]);
 
   const {
     isPending: isSendingOtp,
@@ -61,7 +62,7 @@ function AuthContainer() {
     }
   };
 
-  return <div className="w-full sm:max-w-sm">{renderStep()}</div>;
+  return <div className="w-full sm:max-w-sm">{renderStep()}</div>
 }
 
 export default AuthContainer;

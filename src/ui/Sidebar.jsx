@@ -5,7 +5,6 @@ function Sidebar({ children, isOpen, onClose }) {
 
   return (
     <>
-      {/* Overlay for mobile */}
       {isOpen && (
         <div
           ref={ref}
@@ -13,8 +12,6 @@ function Sidebar({ children, isOpen, onClose }) {
           onClick={onClose}
         />
       )}
-
-      {/* Sidebar */}
       <div
         className={` bg-secondary-0 border-r border-gray-400 p-4
           fixed md:static md:row-start-1 md:row-span-2

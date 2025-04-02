@@ -1,9 +1,11 @@
-import { HiCollection, HiHome } from "react-icons/hi";
+import { HiOutlineHome, HiOutlineViewGrid } from "react-icons/hi";
 import AppLayot from "../../ui/AppLayot";
 import { CustomNavLink } from "../../ui/CustomNavlink";
 import Sidebar from "../../ui/Sidebar";
 import { useState } from "react";
 import Header from "../../ui/Header";
+import Logout from "../authentication/Logout";
+import { LuLayoutDashboard } from "react-icons/lu";
 
 function OwnerLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,14 +14,21 @@ function OwnerLayout() {
     <AppLayot>
       <Header onMenuClick={() => setIsSidebarOpen(true)} />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)}>
+        <CustomNavLink to="/">
+          <HiOutlineHome />
+          <span className="text-sm md:text-base">صفحه اصلی</span>
+        </CustomNavLink>
         <CustomNavLink to="dashboard">
-          <HiHome />
-          <span>داشبورد</span>
+          <LuLayoutDashboard />
+          <span className="text-sm md:text-base">داشبورد</span>
         </CustomNavLink>
         <CustomNavLink to="projects">
-          <HiCollection />
-          <span>پروژه ها</span>
+          <HiOutlineViewGrid />
+          <span className="text-sm md:text-base">پروژه ها</span>
         </CustomNavLink>
+        <div className="md:hidden pr-2">
+          <Logout />
+        </div>
       </Sidebar>
     </AppLayot>
   );

@@ -2,12 +2,13 @@ import Loader from "../../ui/Loader";
 import useOwnerProjects from "./useOwnerProjects";
 import Table from "../../ui/Table";
 import ProjectRow from "./ProjectRow";
+import Empty from "../../ui/Empty";
 
 function ProjectsTable() {
   const { projects, isLoading } = useOwnerProjects();
 
   if (isLoading) return <Loader />;
-  if (!projects.length) return <div>پروژه ای برای نمایش وجود ندارد</div>;
+  if (!projects.length) return <Empty resourceName="پروژه ای" />;
 
   return (
     <Table>

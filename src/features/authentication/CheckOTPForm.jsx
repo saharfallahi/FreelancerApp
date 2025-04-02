@@ -47,17 +47,17 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
   return (
     <div>
       <button>
-        <HiArrowRight onClick={onBack} className="w-6 h-6 text-secondary-500" />
+        <HiArrowRight onClick={onBack} className="w-5 h-5 md:w-6 md:h-6 text-secondary-500" />
       </button>
       {otpResponse && (
-        <p className="flex items-center gap-x-2 my-4">
+        <p className="text-sm md:text-base flex items-center gap-x-2 my-4 text-secondary-700">
           <span>{otpResponse?.message}</span>
           <button onClick={onBack}>
             <CiEdit className="w-6 h-6 text-primary-900" />
           </button>
         </p>
       )}
-      <div className="mb-4 text-secondary-500">
+      <div className="text-sm md:text-base mb-4 text-secondary-500">
         {time > 0 ? (
           <div>{time} ثانیه تا ارسال مجدد کد</div>
         ) : (
@@ -65,7 +65,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
         )}
       </div>
       <form className="space-y-10" onSubmit={checkOtpHandler}>
-        <p className="font-bold text-secondary-800">کد تایید را وارد کنید</p>
+        <p className="font-bold text-sm md:text-base text-secondary-800">کد تایید را وارد کنید</p>
         <OTPInput
           value={otp}
           onChange={setOtp}
@@ -74,7 +74,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
           renderInput={(props) => <input type="number" {...props} />}
           containerStyle="flex flex-row-reverse gap-x-2 justify-center  "
           inputStyle={{
-            width: "2rem",
+            width: "1.8rem",
             padding: "0.5rem 0.2rem",
             border: "1px solid rgb(var(--color-primary-400))",
             borderRadius: "0.5rem",
