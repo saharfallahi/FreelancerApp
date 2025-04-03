@@ -3,7 +3,7 @@ import Navbar from "../ui/Navbar";
 
 function Contact() {
   return (
-    <div className=" flex h-screen bg-secondary-0">
+    <div className=" flex  bg-secondary-0">
       <div className="container xl:max-w-screen-xl mx-auto ">
         <Navbar />
         <ContactForm />
