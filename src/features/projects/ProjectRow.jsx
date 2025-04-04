@@ -6,11 +6,11 @@ import truncateText from "../../utils/truncateText";
 import { HiEye, HiOutlineTrash } from "react-icons/hi2";
 import Modal from "../../ui/Modal";
 import { useState } from "react";
-import ConfirmDelete from "../../ui/confirmDelete";
 import useRemoveProject from "./useRemoveProject";
 import CreateProjectForm from "./CreateProjectForm";
 import ToggleProjectStatus from "./ToggleProjectStatus";
 import { Link } from "react-router-dom";
+import ConfirmDelete from "../../ui/ConfirmDelete";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
