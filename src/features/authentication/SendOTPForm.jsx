@@ -1,7 +1,7 @@
 import Loader from "../../ui/Loader";
 import RHFTextField from "../../ui/RHFTextField";
 
-function SendOTpForm({ register,isSendingOtp,onSubmit }) {
+function SendOTPForm({ register,isSendingOtp,onSubmit }) {
   
 
 
@@ -28,4 +28,4 @@ function SendOTpForm({ register,isSendingOtp,onSubmit }) {
   );
 }
 
-export default SendOTpForm;
+export default SendOTPForm;

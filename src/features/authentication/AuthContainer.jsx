@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import SendOTpForm from "./SendOTpForm";
 import CheckOTPForm from "./CheckOTPForm";
+import SendOTPForm from "./SendOTPForm";
 import { useMutation } from "@tanstack/react-query";
 import { getOtp } from "../../services/authService";
 import toast from "react-hot-toast";
@@ -41,7 +41,7 @@ function AuthContainer() {
     switch (step) {
       case 1:
         return (
-          <SendOTpForm
+          <SendOTPForm
             isSendingOtp={isSendingOtp}
             onSubmit={handleSubmit(sendOtpHandler)}
             setStep={setStep}
