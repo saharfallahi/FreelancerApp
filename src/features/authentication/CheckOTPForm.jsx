@@ -14,7 +14,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
   const [otp, setOtp] = useState("");
   const [time, setTime] = useState(RESEND_TIME);
   const navigate = useNavigate();
-  const { isPending, error, data, mutateAsync } = useMutation({
+  const { isPending, mutateAsync } = useMutation({
     mutationFn: checkOtp,
   });
 
@@ -31,7 +31,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
       const { message, user } = await mutateAsync({ phoneNumber, otp });
       toast.success(message);
       if (!user.isActive) return navigate("/complete-profile");
-      if (user.status !== 2) {
+      if (Number(user.status) !== 2) {
         navigate("/");
         toast("پروفایل شما در انتظار تایید است",  {icon: '👏'});
         return;

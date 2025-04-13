@@ -2,7 +2,7 @@ import Navbar from "../ui/Navbar";
 
 function About() {
   return (
-    <div className=" flex h-screen bg-secondary-100">
+    <div className=" flex min-h-screen bg-secondary-100">
       <div className="container xl:max-w-screen-xl mx-auto">
         <Navbar />
         <p className="text-sm/8 md:text-base/10 text-secondary-700 mt-28 md:mt-40 ">

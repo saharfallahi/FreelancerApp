@@ -1,7 +1,18 @@
 import http from "./httpService";
 
 export function getOtp(data) {
-  return http.post("/user/get-otp", data).then(({ data }) => data.data);
+  return http
+    .post("/user/get-otp", data, {
+      // headers: {
+      //   "Content-Type": "application/json",
+      //   Accept: "application/json",
+      // },
+    })
+    .then(({ data }) => data.data)
+    .catch((error) => {
+      console.error("OTP Error:", error.response?.data || error.message);
+      throw error;
+    });
 }
 
 export function checkOtp(data) {
@@ -24,12 +35,12 @@ export function logoutApi() {
   return http.post("/user/logout").then(({ data }) => data.data);
 }
 
-
 export function getUsersApi() {
   return http.get("/admin/user/list").then(({ data }) => data.data);
 }
 
-export function changeUserStatusApi({userId,data}) {
-  return http.patch(`/admin/user/verify/${userId}`,data).then(({ data }) => data.data);
+export function changeUserStatusApi({ userId, data }) {
+  return http
+    .patch(`/admin/user/verify/${userId}`, data)
+    .then(({ data }) => data.data);
 }
-

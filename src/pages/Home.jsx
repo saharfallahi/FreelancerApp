@@ -4,7 +4,7 @@ import Navbar from "../ui/Navbar";
 function Home() {
   const navigate = useNavigate();
   return (
-    <div className=" flex h-screen bg-secondary-100">
+    <div className=" flex min-h-screen bg-secondary-100">
       <div className="container xl:max-w-screen-xl mx-auto my-auto">
         <Navbar />
         <main className="flex flex-col items-center justify-center text-center">

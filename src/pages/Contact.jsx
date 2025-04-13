@@ -3,10 +3,12 @@ import Navbar from "../ui/Navbar";
 
 function Contact() {
   return (
-    <div className=" flex  bg-secondary-0">
-      <div className="container xl:max-w-screen-xl mx-auto ">
-        <Navbar />
-        <ContactForm />
+    <div className="min-h-screen bg-secondary-0">
+      <div className="flex">
+        <div className="container xl:max-w-screen-xl mx-auto">
+          <Navbar />
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
